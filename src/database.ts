@@ -1,4 +1,4 @@
-interface Reading {
+export interface Reading {
   // TODO: change this to contain whatever information is needed
   timestamp: number;
   name: string;
@@ -34,7 +34,7 @@ export const getReading = (from: number, to: number): Reading[] => {
       database[parseInt(key)].map((item) => result.push(item));
       result.push({
         timestamp: parseInt(key),
-        name: "Power",
+        name: 'Power',
         value: Number(
           database[parseInt(key)]
             .map((item) => item.value)
